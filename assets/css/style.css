@@ -559,10 +559,6 @@ button:focus {
   }
 }
 
-.work-experiences{
-  background-color:transparent;
-}
-
 form {
 	min-width: 25rem;
 	
@@ -617,4 +613,14 @@ form {
     left: 1.5rem;
     top: 1.1rem;
   }
+}
+
+ul{
+  background-color: transparent !important;
+  color: white
+}
+
+ul li{
+  background-color: transparent !important;
+  color: white
 }
