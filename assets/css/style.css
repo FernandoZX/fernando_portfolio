@@ -617,10 +617,26 @@ form {
 
 ul{
   background-color: transparent !important;
-  color: white
+  color: white !important;
 }
 
 ul li{
   background-color: transparent !important;
-  color: white
+  color: white !important;
+}
+
+th{
+  background-color: transparent !important;
+  color: white !important;
+}
+
+td{
+  background-color: transparent !important;
+  color: white !important;
+}
+
+img{
+  background-color: transparent !important;
+  color: white !important;
+  border:0 !important;
 }

@@ -1,0 +1,11 @@
+{
+  "name": "fernando_portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:FernandoZX/fernandocabrera.io.git",
+  "author": "FernandoZX <ingfernandoc@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "imagemagick": "^0.1.3"
+  }
+}
