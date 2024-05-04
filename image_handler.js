@@ -1,6 +1,7 @@
 const im = require('imagemagick');
 const fs = require('fs')
 const path = require("path");
+const { exec } = require('child_process');
 
 // Recursive function to get files
 function getFiles(dir, files = []) {
@@ -42,7 +43,7 @@ filesInTheFolder.forEach((file) => {
   
 });
 */
-
+/*
 im.resize({
   srcPath: 'java.png',
   dstPath: 'java.png',
@@ -61,3 +62,29 @@ im.convert(
     console.log('to transparent background');
   },
 );
+*/
+
+// Function to compress PNG using ImageMagick
+function compressPNG(inputFile, outputFile, quality = 80) {
+    const command = `convert ${inputFile} -quality ${quality} ${outputFile}`;
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`Error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`Image compressed successfully: ${outputFile}`);
+    });
+}
+
+// Example usage
+const inputFilePath = 'modern-2.jpg';
+const outputFilePath = 'modern-2-compressed.jpg';
+const compressionQuality = 55; // Adjust quality as needed (0-100)
+
+// Compress PNG
+compressPNG(inputFilePath, outputFilePath, compressionQuality);
